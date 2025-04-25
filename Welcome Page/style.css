@@ -9,6 +9,44 @@ header h1, .hero h2, .features h3 {
     letter-spacing: 1px;
 }
 
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #e4e4e4;
+}
+
+body.dark-mode .bg-light {
+    background-color: #1e1e1e !important;
+    color: #e4e4e4;
+}
+
+body.dark-mode .bg-white {
+    background-color: #1e1e1e !important;
+}
+
+body.dark-mode .text-muted {
+    color: #b3b3b3 !important;
+}
+
+body.dark-mode header, body.dark-mode footer {
+    background-color: #232323 !important;
+}
+
+body.dark-mode .btn-primary {
+    background-color: #3a3a3a !important;
+    border-color: #3a3a3a !important;
+}
+
+body.dark-mode .btn-primary:hover {
+    background-color: #555 !important;
+}
+
+body.dark-mode .card {
+    background-color: #2e2e2e !important;
+    color: #e4e4e4;
+    border: none;
+}
+
 .card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: #ece3e3;
@@ -27,8 +65,16 @@ header h1, .hero h2, .features h3 {
     transform: scale(1.05);
 }
 
+#themeToggle {
+    transition: transform 0.3s ease;
+}
 
-/* Fix \\navigation bar */
+/* Smooth transition for the theme toggle button */
+body.dark-mode #themeToggle {
+    transform: rotate(180deg);
+}
+
+/* Fix navigation bar */
 nav a {
     margin-right: 20px;
 }
@@ -63,6 +109,26 @@ nav a:last-child {
         margin-bottom: 0;
     }
 }
+
+
+
+/* Transition for dark mode */
+body.dark-mode .card, body.dark-mode .modal-content {
+    background-color: #2e2e2e;
+    color: #f1f1f1;
+}
+
+body.dark-mode .btn-primary {
+    background-color: #555;
+    border-color: #555;
+}
+
+body.dark-mode .btn-primary:hover {
+    background-color: #444;
+}
+
+
+
 
 /* Footer Styles */
 .footer {
@@ -101,4 +167,18 @@ nav a:last-child {
 .footer-icon:hover {
     color: #00bcd4; /* Matches link hover color */
     transform: scale(1.2); /* Slight zoom effect */
+}
+
+/* Dark Mode Footer */
+body.dark-mode .footer {
+    background-color: #1b1b1b; /* Match dark mode aesthetics */
+    color: #d1d1d1;
+}
+
+body.dark-mode .footer-link:hover {
+    color: #80deea; /* Softer blue in dark mode */
+}
+
+body.dark-mode .footer-icon:hover {
+    color: #80deea; /* Icon hover in sync with links */
 }
