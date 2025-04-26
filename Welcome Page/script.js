@@ -18,11 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Redirect to login page when the modal button is clicked
+    // Ensure that the button is available before attaching the event listener
     const loginRedirectBtn = document.getElementById('loginRedirect');
-    loginRedirectBtn.addEventListener('click', () => {
-        window.location.href = 'login.html'; // Redirect to login page
-    });
+    if (loginRedirectBtn) {
+        loginRedirectBtn.addEventListener('click', () => {
+            window.location.href = '../Login%20Page/index.html'; // Use forward slash here
+        });
+    }
 
     // Event listener for the dark mode toggle
     themeToggle.addEventListener('click', () => {
