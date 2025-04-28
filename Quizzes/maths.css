@@ -1,0 +1,136 @@
+:root {
+    --primary-color: #c40094;
+    --hover-color: #950170;
+    --bg-color: #09001d;
+    --text-color: #fff;
+    --button-bg-color: rgba(255, 255, 255, .1);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Arial', sans-serif;
+}
+
+.quiz-box {
+    width: 100%;
+    max-width: 500px;
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 30px;
+    text-align: center; /* Center all elements inside quiz box */
+}
+
+.title {
+    font-size: 32px;
+    text-align: center;
+    text-decoration: underline;
+    background: linear-gradient(45deg, transparent, var(--primary-color), transparent);
+    border-radius: 6px;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 2px solid var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.quiz-header span {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.header-score {
+    background: var(--primary-color);
+    border-radius: 3px;
+    padding: 7px;
+}
+
+.timer {
+    font-size: 2em;
+    font-weight: bold;
+    background: #C40094;
+    padding: 9px;
+}
+
+.question-text {
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.option-list .option {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 4px;
+    font-size: 17px;
+    margin: 15px 0;
+    cursor: pointer;
+    transition: .3s;
+    color: #fff;
+}
+
+.option-list .option:hover {
+    background: rgba(255, 255, 255, .1);
+    border-color: rgba(255, 255, 255, .1);
+}
+
+.quiz-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid var(--primary-color);
+    padding-top: 20px;
+    margin-top: 25px;
+}
+
+.question-total {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.option.correct {
+    background-color: #28a745;
+    color: white;
+}
+
+.option.incorrect {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Bootstrap Overrides */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--hover-color);
+    border-color: var(--hover-color);
+}
+
+.btn {
+    margin-bottom: 5px;
+}
+
+button {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    opacity: 0.8;
+}
