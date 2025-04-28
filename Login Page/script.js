@@ -58,7 +58,7 @@ signInForm.addEventListener('submit', (event) => {
   
   if (user) {
     alert(`Welcome back, ${user.name}!`);
-    window.location.href = "quiz.html";
+    window.location.href = "../Quiz selection page/index.html";
   } else {
     alert('Invalid email or password.');
   }
